@@ -1,36 +1,55 @@
-# Quantum Mechanical Keyboard Firmware
+# Firmware of My Personal Keyboard
 
-[![Current Version](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
-[![Discord](https://img.shields.io/discord/440868230475677696.svg)](https://discord.gg/qmk)
-[![Docs Status](https://img.shields.io/badge/docs-ready-orange.svg)](https://docs.qmk.fm)
-[![GitHub contributors](https://img.shields.io/github/contributors/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/pulse/monthly)
-[![GitHub forks](https://img.shields.io/github/forks/qmk/qmk_firmware.svg?style=social&label=Fork)](https://github.com/qmk/qmk_firmware/)
+This repo is forked from [qmk-firmware](https://github.com/qmk/qmk_firmware). Changes are made to support my personal keyboard.
 
-This is a keyboard firmware based on the [tmk\_keyboard firmware](https://github.com/tmk/tmk_keyboard) with some useful features for Atmel AVR and ARM controllers, and more specifically, the [OLKB product line](https://olkb.com), the [ErgoDox EZ](https://ergodox-ez.com) keyboard, and the Clueboard product line.
+The major changes are done in the folder `keyboards/sofle_pico/`.
 
-## Documentation
+## 我的键盘配置 My Keyboard Configuration
 
-* [See the official documentation on docs.qmk.fm](https://docs.qmk.fm)
+### Chinese
 
-The docs are powered by [VitePress](https://vitepress.dev/). They are also viewable offline; see [Previewing the Documentation](https://docs.qmk.fm/#/contributing?id=previewing-the-documentation) for more details.
+1. Sofle pico键盘，购买自淘宝：
 
-You can request changes by making a fork and opening a [pull request](https://github.com/qmk/qmk_firmware/pulls).
+  <img src="./Figures/Sofle_淘宝链接.JPG" alt="Sofle淘宝链接" width="200" height="auto" style="display: block; margin: 10px auto; border: 1px solid #eee; border-radius: 4px; padding: 5px;">
 
-## Supported Keyboards
+2. Cherry 红轴（70颗），购买自京东旗舰店
 
-* [Planck](/keyboards/planck/)
-* [Preonic](/keyboards/preonic/)
-* [ErgoDox EZ](/keyboards/ergodox_ez/)
-* [Clueboard](/keyboards/clueboard/)
-* [Cluepad](/keyboards/clueboard/17/)
-* [Atreus](/keyboards/atreus/)
+3. 豆奶键帽，购买自淘宝：
 
-The project also includes community support for [lots of other keyboards](/keyboards/).
+  <img src="./Figures/豆奶键帽_淘宝链接.JPG" alt="豆奶键帽淘宝链接" width="200" height="auto" style="display: block; margin: 10px auto; border: 1px solid #eee; border-radius: 4px; padding: 5px;">
 
-## Maintainers
+### 价格
 
-QMK is developed and maintained by Jack Humbert of OLKB with contributions from the community, and of course, [Hasu](https://github.com/tmk). The OLKB product firmwares are maintained by [Jack Humbert](https://github.com/jackhumbert), the Ergodox EZ by [ZSA Technology Labs](https://github.com/zsa), the Clueboard by [Zach White](https://github.com/skullydazed), and the Atreus by [Phil Hagelberg](https://github.com/technomancy).
+| 物品 | 价格 |
+| ---- | ---- |
+| 键盘 | 399  |
+| 轴体 | 95   |
+| 键帽 | 89   |
+| 总计 | 583  |
 
-## Official Website
+### English
 
-[qmk.fm](https://qmk.fm) is the official website of QMK, where you can find links to this page, the documentation, and the keyboards supported by QMK.
+1. Sofle Pico Keyboard, purchased from Taobao:
+
+ <img src="./Figures/Sofle_淘宝链接.JPG" alt="Sofle Taobao Link" width="200" height="auto" style="display: block; margin: 10px auto; border: 1px solid #eee; border-radius: 4px; padding: 5px;">
+
+2. Cherry Red Switches (70 pieces), purchased from JD.com Flagship Store
+
+3. Dou Nai Keycaps, purchased from Taobao:
+
+ <img src="./Figures/豆奶键帽_淘宝链接.JPG" alt="Dou Nai Keycaps Taobao Link" width="200" height="auto" style="display: block; margin: 10px auto; border: 1px solid #eee; border-radius: 4px; padding: 5px;">
+
+### Price
+
+| Item     | Price (CNY) |
+| -------- | ----------- |
+| Keyboard | 399         |
+| Switches | 95          |
+| Keycaps  | 89          |
+| Total    | 583         |
+
+## Setup
+
+1. Run `qmk compile -kb sofle_pico -km lzx --compiledb` to generate the `compile_commands.json` file.
+2. Run `make sofle_pico:lzx:flash` to build the firmware and flash to the keyboard.
+3. Hold `fn + b` on the left keyboard to enter the bootloader mode and wait for it the finish flashing.
