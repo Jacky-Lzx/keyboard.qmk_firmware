@@ -101,6 +101,10 @@ tags
 !docs/public/**.jpeg
 !docs/public/**.png
 
+!Figures/**.jpg
+!Figures/**.jpeg
+!Figures/**.png
+
 # Things Travis sees
 /.vs
 id_rsa_*
