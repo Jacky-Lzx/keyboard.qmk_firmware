@@ -53,3 +53,4 @@ The major changes are done in the folder `keyboards/sofle_pico/`.
 1. Run `qmk compile -kb sofle_pico -km lzx --compiledb` to generate the `compile_commands.json` file.
 2. Run `make sofle_pico:lzx:flash` to build the firmware and flash to the keyboard.
 3. Hold `fn + b` on the left keyboard to enter the bootloader mode and wait for it the finish flashing.
+4. For the right split, disconnect to the lieft halft first, and hold the top-right button when connecting to the computer to enter the bootloader mode, and run the command in Step 2 to flash the keyboard.
